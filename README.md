@@ -3,6 +3,29 @@
 
 # Использование
 
+```
+<app> --help (1)
+<app> [--user username] [--password password] [--host host]
+      [ FillDatabase
+      | CreateMolecule smiles iupac
+      | CreateCatalyst smiles name
+      | CreateReaction reactionName
+          [--reagent amount id]*
+          [--product amount id]*
+          [--catalyst id t p]
+      | FindReactionById smiles iupac
+      | FindShortestPathBetweenMolecules smiles iupac] (2)
+  (1) show this message
+  (2) perform request
+  database parameters:
+      user        [default = "neo4j"]
+      password    [default = "neo4j"]
+      host        [default = "localhost"]
+
+```
+
+# Ответы
+
 > Между записями в структурах данных могут быть функциональные зависимости
 > (например, между представлением smiles и именем IUPAC).
 
